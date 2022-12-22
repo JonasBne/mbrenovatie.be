@@ -1,0 +1,35 @@
+---
+import classnames from "classnames";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+
+const defaultListItemStyles = "font-light px-2 md:text-lg md:px-4";
+const activeListItemStyles = "border-b-[1px] border-gray-900";
+---
+
+<header class="p-6 md:p-8">
+    <nav class="flex items-center justify-between">
+        <a class="font-bold text-xl md:text-2xl lg:text-3xl" href="/"
+            >MB Renovatie</a
+        >
+        <ul class="flex items-center">
+            <li
+                class={classnames(
+                    defaultListItemStyles,
+                    currentPath === "galery" && activeListItemStyles
+                )}
+            >
+                <a href="/galery">Galerij</a>
+            </li>
+            <li
+                class={classnames(
+                    defaultListItemStyles,
+                    currentPath === "contact" && activeListItemStyles
+                )}
+            >
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>
