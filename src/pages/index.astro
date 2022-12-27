@@ -1,5 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+
+const paragraphStyles = "text-2xl font-semibold mb-3 text-gray-900";
 ---
 
-<Layout title="Welkom!"><div>Homepage</div></Layout>
+<Layout title="Welkom!">
+    <aside>
+        <Image
+            alt="foto van zwevend tv-meubel"
+            src={import("../images/cover-title-page.png")}
+        />
+    </aside>
+    <article class="px-6 mt-6">
+        <p class="font-semibold text-2xl">Marc Boone</p>
+        <p class="font-light mt-4">
+            Zelfstandig schrijnwerker en meubelmaker met meer dan 35 jaar
+            ervaring uit Antwerpen.
+        </p>
+        <div class="flex justify-center">
+            <button
+                class="mt-8 px-8 py-3 text-white rounded font-light bg-slate-800"
+                >Bekijk werk</button
+            >
+        </div>
+    </article>
+</Layout>

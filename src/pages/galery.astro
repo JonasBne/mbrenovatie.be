@@ -1,5 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+
+const headingStyles = "text-left font-light";
+const imageStyles = "my-2 rounded-md";
 ---
 
-<Layout title="Galerij"><div>Galery page</div></Layout>
+<Layout title="Galerij">
+    <article class="p-6">
+        <p class={headingStyles}>Schilderwerken</p>
+        <Image
+            class={imageStyles}
+            src={import("../images/cover.jpg")}
+            alt="cover foto"
+        />
+    </article>
+</Layout>
