@@ -25,12 +25,34 @@ const keyWordStyles = "font-semibold text-gray-900 text-2xl mb-2";
             Marc Boone is een zelfstandig schrijnwerker en meubelmaker met meer
             dan 35 jaar ervaring uit Antwerpen.
         </p>
-        <div class="flex items-center justify-evenly my-6">
-            <PrimaryLink label="Bekijk werk" linkTo="/galery" />
-            <SecondaryLink label="Stel een vraag" linkTo="/contact" />
+        <div class="flex flex-col my-8">
+            <PrimaryLink
+                label="Bekijk onze werken"
+                linkTo="/galery"
+                styles="mb-4"
+            />
+            <SecondaryLink label="Stel ons je vraag" linkTo="/contact" />
         </div>
     </article>
-    <aside class="p-6">
-        <h3 class="text-gray-800 text-xl font-bold">Galerij</h3>
+    <aside class="px-6">
+        <h3 class="text-gray-900 text-xl font-semibold mb-4">Recente werken</h3>
+        <Image
+            alt="foto van zwevend tv-meubel"
+            src={import("../images/cover-title-page.png")}
+            class="rounded-md mb-4"
+        />
+        <Image
+            alt="foto van zwevend tv-meubel"
+            src={import("../images/cover-title-page.png")}
+            class="rounded-md mb-4"
+        />
+        <Image
+            alt="foto van zwevend tv-meubel"
+            src={import("../images/cover-title-page.png")}
+            class="rounded-md mb-4"
+        />
+        <div class="flex items-center justify-center my-8">
+            <SecondaryLink label="Bekijk alle werken" linkTo="/galery" />
+        </div>
     </aside>
 </Layout>

@@ -1,13 +1,18 @@
 ---
+import classnames from "classnames";
+
 export interface Props {
+    styles?: string;
     label: string;
     linkTo: string;
 }
 
-const { label, linkTo } = Astro.props;
+const { label, linkTo, styles } = Astro.props;
+
+const defaultStyles =
+    "px-8 py-3 text-gray-800 rounded font-light border border-gray-800 w-full text-center";
 ---
 
-<a
-    class="px-8 py-3 text-gray-800 rounded font-light border border-gray-800"
-    href={linkTo}>{label}</a
+<a class={classnames(defaultStyles, styles ? styles : "")} href={linkTo}
+    >{label}</a
 >
