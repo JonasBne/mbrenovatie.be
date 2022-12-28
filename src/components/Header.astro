@@ -19,6 +19,14 @@ const activeListItemStyles = "text-gray-800 border-b-[1px] border-gray-800";
             <li
                 class={classnames(
                     defaultListItemStyles,
+                    currentPath === "" && activeListItemStyles
+                )}
+            >
+                <a href="/">Home</a>
+            </li>
+            <li
+                class={classnames(
+                    defaultListItemStyles,
                     currentPath === "galery" && activeListItemStyles
                 )}
             >
