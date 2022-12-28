@@ -10,7 +10,7 @@ export interface Props {
 const { label, linkTo, styles } = Astro.props;
 
 const defaultStyles =
-    "px-8 py-3 text-gray-800 rounded font-light border border-gray-800 w-full text-center";
+    "px-8 py-3 text-gray-800 rounded font-light border border-gray-800 text-center";
 ---
 
 <a class={classnames(defaultStyles, styles ? styles : "")} href={linkTo}
