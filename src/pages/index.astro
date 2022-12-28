@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 import PrimaryLink from "../components/links/PrimaryLink.astro";
 import SecondaryLink from "../components/links/SecondaryLink.astro";
+import ImageModal from "../components/ImageModal.astro";
 
 const keyWordStyles =
     "font-semibold text-gray-900 text-3xl mb-2 lg:font-bold lg:text-3xl lg:mb-4 lg:mx-4";
@@ -56,29 +57,29 @@ const keyWordStyles =
         </h3>
         <div class="flex flex-col lg:grid lg:grid-cols-3 gap-4 justify-between">
             <div class="flex flex-col">
-                <Image
-                    alt="foto van zwevend tv-meubel"
-                    src={import("../images/cover-title-page.png")}
-                    class="rounded-md mb-4"
+                <ImageModal
+                    imageId="01"
+                    imageAlt="Zwevend tv-meubel"
+                    imageSrc="../images/cover-title-page.png"
                 />
                 <p class="text-gray-700 font-light">Zwevend tv-meubel</p>
             </div>
             <div class="flex flex-col">
-                <Image
-                    alt="foto van zwevend tv-meubel"
-                    src={import("../images/cover-title-page.png")}
-                    class="rounded-md mb-4"
+                <ImageModal
+                    imageId="02"
+                    imageAlt="Zwevend tv-meubel"
+                    imageSrc="../images/cover.jpg"
                 />
+                <p class="text-gray-700 font-light">Zwevend tv-meubel</p>
+            </div>
+            <!-- <div class="flex flex-col">
+                <ImageModal />
                 <p class="text-gray-700 font-light">Zwevend tv-meubel</p>
             </div>
             <div class="flex flex-col">
-                <Image
-                    alt="foto van zwevend tv-meubel"
-                    src={import("../images/cover-title-page.png")}
-                    class="rounded-md mb-4"
-                />
+                <ImageModal />
                 <p class="text-gray-700 font-light">Zwevend tv-meubel</p>
-            </div>
+            </div> -->
         </div>
         <div class="flex items-center justify-center my-8 lg:my-12">
             <SecondaryLink label="Bekijk alle werken" linkTo="/galery" />
