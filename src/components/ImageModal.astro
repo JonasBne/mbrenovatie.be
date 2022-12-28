@@ -15,7 +15,7 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
     id={`image-${imageId}`}
     alt={imageAlt}
     src={import(imageSrc)}
-    class="image rounded-md mb-4"
+    class="modal-image modal-image-cover rounded-md mb-4"
 />
 
 <!-- The Modal -->
@@ -24,7 +24,10 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
     <span class="close">&times;</span>
 
     <!-- Modal Content (The Image) -->
-    <img class="modal-image modal-content" id={`modal-image-${imageId}`} />
+    <img
+        class="modal-image modal-image-content modal-content"
+        id={`modal-image-${imageId}`}
+    />
 
     <!-- Modal Caption (Image Text) -->
     <div id={`caption-${imageId}`} class="caption"></div>
@@ -121,38 +124,56 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
 
 <script>
     // get the modal
-    const modal = document.getElementById("modal");
+    const modal = document.getElementById("modal") as HTMLDivElement;
 
-    // get all images and their respective captions
+    // get all modal images on the screen
     const images = document.getElementsByClassName(
-        "image"
+        "modal-image"
     ) as HTMLCollectionOf<HTMLImageElement>;
-    const modalImages = document.getElementsByClassName("modal-image");
-    const captionTexts = document.getElementsByClassName("caption");
 
     // for each image, get the image and insert it into the modal
     Array.from(images).forEach((img, index) => {
-        console.log("img", img);
-        const modalImg = modalImages[index] as HTMLImageElement;
-        const captionText = captionTexts[index];
+        // index always skips a step because we omit the modals
+        const position = index === 0 ? 0 : index - 1;
 
-        if (modal && modalImg && captionText) {
-            console.log("src", img.src);
-            img.onclick = () => {
-                modal.style.display = "block";
-                modalImg.src = img.src;
-                captionText.innerHTML = img.alt;
+        // only take into account the cover image
+        // not the nested modal image
+        const imgElement = Array.from(
+            document.getElementsByClassName("modal-image-cover")
+        ).find((el) => el.id === img.id) as HTMLImageElement | undefined;
+
+        if (imgElement !== undefined) {
+            imgElement.onclick = () => {
+                // get the corresponding modal image container
+                const modalImgElement = Array.from(
+                    document.getElementsByClassName("modal-image-content")
+                )[position] as HTMLImageElement | undefined;
+
+                // get the corresponding caption text
+                const captionElement = Array.from(
+                    document.getElementsByClassName("caption")
+                )[position] as HTMLDivElement | undefined;
+
+                if (
+                    modalImgElement !== undefined &&
+                    captionElement !== undefined
+                ) {
+                    modal.style.display = "block";
+                    modalImgElement.src = img.src;
+                    captionElement.innerHTML = img.alt;
+                }
             };
         }
+        // Get the span element that closes the modal
+        const span = document.getElementsByClassName(
+            "close"
+        )[0] as HTMLSpanElement;
+
+        // close the modal
+        span.onclick = () => {
+            if (modal) {
+                modal.style.display = "none";
+            }
+        };
     });
-
-    // Get the span element that closes the modal
-    const span = document.getElementsByClassName("close")[0] as HTMLSpanElement;
-
-    // close the modal
-    span.onclick = () => {
-        if (modal) {
-            modal.style.display = "none";
-        }
-    };
 </script>
