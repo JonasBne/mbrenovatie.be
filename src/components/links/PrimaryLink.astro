@@ -1,0 +1,13 @@
+---
+export interface Props {
+    label: string;
+    linkTo: string;
+}
+
+const { label, linkTo } = Astro.props;
+---
+
+<a
+    class="px-8 py-3 text-white rounded font-light border border-gray-800 bg-gray-800"
+    href={linkTo}>{label}</a
+>
