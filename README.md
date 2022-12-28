@@ -13,3 +13,4 @@ This website is work in progress and will be released soon. More info will be ad
 -   [ ] Contact form & responsive design
 -   [ ] Setup hosting
 -   [ ] SEO
+-   [ ] Styling of image modal (better alignment etc)
