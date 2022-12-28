@@ -15,52 +15,36 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
     id={`image-${imageId}`}
     alt={imageAlt}
     src={import(imageSrc)}
-    class="modal-image modal-image-cover rounded-md mb-4"
+    class="modal-image rounded-md mb-4"
 />
 
-<!-- The Modal -->
-<div id="modal" class="modal">
-    <!-- The Close Button -->
-    <span class="close">&times;</span>
-
-    <!-- Modal Content (The Image) -->
-    <img
-        class="modal-image modal-image-content modal-content"
-        id={`modal-image-${imageId}`}
-    />
-
-    <!-- Modal Caption (Image Text) -->
-    <div id={`caption-${imageId}`} class="caption"></div>
-</div>
-
-<style>
+<!-- style must be injected globally because the modal is appended as a direct child of the body -->
+<style is:global>
     /* Style the Image Used to Trigger the Modal */
-    .image {
+    .modal-image {
         border-radius: 5px;
         cursor: pointer;
         transition: 0.3s;
     }
 
-    .image:hover {
+    .modal-image:hover {
         opacity: 0.7;
     }
 
-    /* The Modal (background) */
     .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
         left: 0;
         top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
     }
 
-    /* Modal Content (Image) */
     .modal-content {
         margin: auto;
         display: block;
@@ -68,7 +52,6 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
         max-width: 700px;
     }
 
-    /* Caption of Modal Image (Image Text) - Same Width as the Image */
     .caption {
         margin: auto;
         display: block;
@@ -80,7 +63,6 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
         height: 150px;
     }
 
-    /* Add Animation - Zoom in the Modal */
     .modal-content,
     .caption {
         animation-name: zoom;
@@ -96,7 +78,6 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
         }
     }
 
-    /* The Close Button */
     .close {
         position: absolute;
         top: 15px;
@@ -114,7 +95,6 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
         cursor: pointer;
     }
 
-    /* 100% Image Width on Smaller Screens */
     @media only screen and (max-width: 700px) {
         .modal-content {
             width: 100%;
@@ -123,57 +103,49 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
 </style>
 
 <script>
-    // get the modal
-    const modal = document.getElementById("modal") as HTMLDivElement;
-
     // get all modal images on the screen
     const images = document.getElementsByClassName(
         "modal-image"
     ) as HTMLCollectionOf<HTMLImageElement>;
 
+    // html for the modal to be appended on click
+    // modal
+    const modalElement = document.createElement("div");
+    modalElement.className = "modal";
+    modalElement.style.display = "block";
+
+    // close button and append to modal as child
+    const closeElement = document.createElement("span");
+    closeElement.className = "close";
+    closeElement.innerHTML = "&times;";
+
+    modalElement.appendChild(closeElement);
+
+    // modal content and append to modal as child
+    const modalImgElement = document.createElement("img");
+    modalImgElement.className = "modal-image modal-image-content modal-content";
+
+    modalElement.appendChild(modalImgElement);
+
+    // caption and append to modal as child
+    const captionElement = document.createElement("div");
+    captionElement.className = "caption";
+
+    modalElement.appendChild(captionElement);
+
     // for each image, get the image and insert it into the modal
-    Array.from(images).forEach((img, index) => {
-        // index always skips a step because we omit the modals
-        const position = index === 0 ? 0 : index - 1;
-
-        // only take into account the cover image
-        // not the nested modal image
-        const imgElement = Array.from(
-            document.getElementsByClassName("modal-image-cover")
-        ).find((el) => el.id === img.id) as HTMLImageElement | undefined;
-
-        if (imgElement !== undefined) {
-            imgElement.onclick = () => {
-                // get the corresponding modal image container
-                const modalImgElement = Array.from(
-                    document.getElementsByClassName("modal-image-content")
-                )[position] as HTMLImageElement | undefined;
-
-                // get the corresponding caption text
-                const captionElement = Array.from(
-                    document.getElementsByClassName("caption")
-                )[position] as HTMLDivElement | undefined;
-
-                if (
-                    modalImgElement !== undefined &&
-                    captionElement !== undefined
-                ) {
-                    modal.style.display = "block";
-                    modalImgElement.src = img.src;
-                    captionElement.innerHTML = img.alt;
-                }
-            };
-        }
-        // Get the span element that closes the modal
-        const span = document.getElementsByClassName(
-            "close"
-        )[0] as HTMLSpanElement;
+    Array.from(images).forEach((img) => {
+        img.onclick = () => {
+            // append modal to body
+            modalImgElement.src = img.src;
+            captionElement.innerHTML = img.alt;
+            document.body.appendChild(modalElement);
+        };
 
         // close the modal
-        span.onclick = () => {
-            if (modal) {
-                modal.style.display = "none";
-            }
+        closeElement.onclick = () => {
+            // completely remove from DOM to avoid incorrect rendering
+            document.body.removeChild(modalElement);
         };
     });
 </script>
