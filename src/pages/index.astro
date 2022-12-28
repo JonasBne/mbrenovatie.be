@@ -5,7 +5,7 @@ import PrimaryLink from "../components/links/PrimaryLink.astro";
 import SecondaryLink from "../components/links/SecondaryLink.astro";
 
 const keyWordStyles =
-    "font-semibold text-gray-900 text-2xl mb-2 lg:font-bold lg:text-3xl lg:mb-4 lg:mx-4";
+    "font-semibold text-gray-900 text-3xl mb-2 lg:font-bold lg:text-3xl lg:mb-4 lg:mx-4";
 ---
 
 <Layout title="Welkom!">
@@ -27,7 +27,7 @@ const keyWordStyles =
             </div>
 
             <p
-                class="text-gray-800 font-light mt-4 lg:text-xl lg:mt-12 lg:mx-4"
+                class="text-gray-800 font-light mt-8 lg:text-xl lg:mt-12 lg:mx-4"
             >
                 Marc Boone is een zelfstandig schrijnwerker en meubelmaker met
                 meer dan 35 jaar ervaring uit Antwerpen.
@@ -55,38 +55,32 @@ const keyWordStyles =
             Recente werken
         </h3>
         <div class="flex flex-col lg:grid lg:grid-cols-3 gap-4 justify-between">
-            <Image
-                alt="foto van zwevend tv-meubel"
-                src={import("../images/cover-title-page.png")}
-                class="rounded-md mb-4"
-            />
-            <Image
-                alt="foto van zwevend tv-meubel"
-                src={import("../images/cover-title-page.png")}
-                class="rounded-md mb-4"
-            />
-            <Image
-                alt="foto van zwevend tv-meubel"
-                src={import("../images/cover-title-page.png")}
-                class="rounded-md mb-4"
-            />
-            <Image
-                alt="foto van zwevend tv-meubel"
-                src={import("../images/cover-title-page.png")}
-                class="rounded-md mb-4"
-            />
-            <Image
-                alt="foto van zwevend tv-meubel"
-                src={import("../images/cover-title-page.png")}
-                class="rounded-md mb-4"
-            />
-            <Image
-                alt="foto van zwevend tv-meubel"
-                src={import("../images/cover-title-page.png")}
-                class="rounded-md mb-4"
-            />
+            <div class="flex flex-col">
+                <Image
+                    alt="foto van zwevend tv-meubel"
+                    src={import("../images/cover-title-page.png")}
+                    class="rounded-md mb-4"
+                />
+                <p class="text-gray-700 font-light">Zwevend tv-meubel</p>
+            </div>
+            <div class="flex flex-col">
+                <Image
+                    alt="foto van zwevend tv-meubel"
+                    src={import("../images/cover-title-page.png")}
+                    class="rounded-md mb-4"
+                />
+                <p class="text-gray-700 font-light">Zwevend tv-meubel</p>
+            </div>
+            <div class="flex flex-col">
+                <Image
+                    alt="foto van zwevend tv-meubel"
+                    src={import("../images/cover-title-page.png")}
+                    class="rounded-md mb-4"
+                />
+                <p class="text-gray-700 font-light">Zwevend tv-meubel</p>
+            </div>
         </div>
-        <div class="flex items-center justify-center my-8">
+        <div class="flex items-center justify-center my-8 lg:my-12">
             <SecondaryLink label="Bekijk alle werken" linkTo="/galery" />
         </div>
     </aside>
