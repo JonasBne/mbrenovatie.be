@@ -6,10 +6,9 @@ This website is work in progress and will be released soon. More info will be ad
 
 ## To do
 
--   [ ] Setup Sanity & fetch images from CMS
 -   [ ] Cleanup styles
 -   [ ] Galery page & responsive design
--   [ ] Mail-to action footer
+-   [x] Mail-to action footer
 -   [ ] Contact form & responsive design
 -   [ ] Setup hosting
 -   [ ] SEO

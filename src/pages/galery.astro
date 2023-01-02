@@ -3,16 +3,42 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 
 const headingStyles = "text-left font-light";
-const imageStyles = "my-2 rounded-md";
+const imageStyles = "my-2 rounded-md hover:shadow-2xl";
 ---
 
 <Layout title="Galerij">
     <article class="p-6">
-        <p class={headingStyles}>Schilderwerken</p>
-        <Image
-            class={imageStyles}
-            src={import("../images/cover.jpg")}
-            alt="cover foto"
-        />
+        <div class="mb-6">
+            <p class={headingStyles}>Schrijn- & Meubelmakerij</p>
+            <Image
+                class={imageStyles}
+                src={import("../images/cover.jpg")}
+                alt="cover foto"
+            />
+        </div>
+        <div class="mb-6">
+            <p class={headingStyles}>Schilderwerken</p>
+            <Image
+                class={imageStyles}
+                src={import("../images/cover.jpg")}
+                alt="cover foto"
+            />
+        </div>
+        <div class="mb-6">
+            <p class={headingStyles}>Vloeren</p>
+            <Image
+                class={imageStyles}
+                src={import("../images/cover.jpg")}
+                alt="cover foto"
+            />
+        </div>
+        <div class="mb-6">
+            <p class={headingStyles}>Buiten</p>
+            <Image
+                class={imageStyles}
+                src={import("../images/cover.jpg")}
+                alt="cover foto"
+            />
+        </div>
     </article>
 </Layout>
