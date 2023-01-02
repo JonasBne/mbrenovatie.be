@@ -2,12 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 
-const headingStyles = "text-left font-light";
+const headingStyles = "text-left text-gray-800 font-light md:text-lg";
 const imageStyles = "my-2 rounded-md hover:shadow-2xl";
 ---
 
 <Layout title="Galerij">
-    <article class="p-6">
+    <article
+        class="px-6 my-6 md:grid md:grid-cols-2 gap-6 lg:grid-cols-3 justify-between"
+    >
         <div class="mb-6">
             <p class={headingStyles}>Schrijn- & Meubelmakerij</p>
             <Image
