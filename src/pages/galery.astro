@@ -1,9 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
-
-const headingStyles = "text-left text-gray-800 font-light md:text-lg";
-const imageStyles = "my-2 rounded-md hover:shadow-2xl";
+import PrimaryCard from "../components/PrimaryCard.astro";
 ---
 
 <Layout title="Galerij">
@@ -11,51 +9,45 @@ const imageStyles = "my-2 rounded-md hover:shadow-2xl";
         class="px-6 my-6 md:grid md:grid-cols-2 gap-6 lg:grid-cols-3 justify-between"
     >
         <div class="mb-6">
-            <p class={headingStyles}>Schrijn- & Meubelmakerij</p>
-            <Image
-                class={imageStyles}
-                src={import("../images/cover.jpg")}
-                alt="cover foto"
+            <PrimaryCard
+                heading="Schrijn- & Meubelmakerij"
+                imageSrc="../images/cover.jpg"
+                imageAlt="cover foto"
             />
         </div>
         <div class="mb-6">
-            <p class={headingStyles}>Schilderwerken</p>
-            <Image
-                class={imageStyles}
-                src={import("../images/cover.jpg")}
-                alt="cover foto"
+            <PrimaryCard
+                heading="Schilderwerken"
+                imageSrc="../images/cover.jpg"
+                imageAlt="cover foto"
             />
         </div>
         <div class="mb-6">
-            <p class={headingStyles}>Vloer- & tegelwerken</p>
-            <Image
-                class={imageStyles}
-                src={import("../images/cover.jpg")}
-                alt="cover foto"
+            <PrimaryCard
+                heading="Vloer- & tegelwerken"
+                imageSrc="../images/cover.jpg"
+                imageAlt="cover foto"
             />
         </div>
         <div class="mb-6">
-            <p class={headingStyles}>Keukens</p>
-            <Image
-                class={imageStyles}
-                src={import("../images/cover.jpg")}
-                alt="cover foto"
+            <PrimaryCard
+                heading="Keukens"
+                imageSrc="../images/cover.jpg"
+                imageAlt="cover foto"
             />
         </div>
         <div class="mb-6">
-            <p class={headingStyles}>Badkamers</p>
-            <Image
-                class={imageStyles}
-                src={import("../images/cover.jpg")}
-                alt="cover foto"
+            <PrimaryCard
+                heading="Badkamers"
+                imageSrc="../images/cover.jpg"
+                imageAlt="cover foto"
             />
         </div>
         <div class="mb-6">
-            <p class={headingStyles}>Buiten</p>
-            <Image
-                class={imageStyles}
-                src={import("../images/cover.jpg")}
-                alt="cover foto"
+            <PrimaryCard
+                heading="Buitenwerken"
+                imageSrc="../images/cover.jpg"
+                imageAlt="cover foto"
             />
         </div>
     </article>
