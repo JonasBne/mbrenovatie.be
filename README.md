@@ -17,3 +17,4 @@ This website is work in progress and will be released soon. More info will be ad
 -   [ ] form responsive design
 -   [ ] form submit
 -   [ ] add VAT number
+-   [ ] check netlify (forms) vs vercel (formspree) + pricing
