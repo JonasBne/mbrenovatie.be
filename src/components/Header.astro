@@ -37,7 +37,8 @@ const activeListItemStyles = "text-gray-800 border-b-[1px] border-gray-800";
             <li
                 class={classnames(
                     defaultListItemStyles,
-                    currentPath === "contact" && activeListItemStyles
+                    (currentPath === "contact" || currentPath === "success") &&
+                        activeListItemStyles
                 )}
             >
                 <a href="/contact">Contact</a>

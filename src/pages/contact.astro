@@ -26,7 +26,13 @@ const inputFieldStyles =
                 Stuur ons gerust een bericht met jouw vraag en we helpen je
                 graag verder!
             </p>
-            <form class="mb-6">
+            <form
+                action="/success"
+                class="mb-6"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+            >
                 <div class="grid grid-cols-1 -mx-3 mb-6">
                     <div class="grid grid-cols-2">
                         <div class="px-3">
@@ -37,6 +43,7 @@ const inputFieldStyles =
                                 class={inputFieldStyles}
                                 id="first-name"
                                 type="text"
+                                required
                             />
                         </div>
                         <div class="px-3">
@@ -47,6 +54,7 @@ const inputFieldStyles =
                                 class={inputFieldStyles}
                                 id="last-name"
                                 type="text"
+                                required
                             />
                         </div>
                     </div>
@@ -58,6 +66,7 @@ const inputFieldStyles =
                             class={inputFieldStyles}
                             id="subject"
                             type="text"
+                            required
                         />
                     </div>
                     <div class="px-3">
@@ -68,20 +77,21 @@ const inputFieldStyles =
                             class={inputFieldStyles}
                             id="email"
                             type="email"
+                            required
                         />
                     </div>
                     <div class="px-3">
                         <label class={inputLabelStyles} for="message">
                             Bericht *
                         </label>
-                        <textarea class={inputFieldStyles} id="message"
+                        <textarea class={inputFieldStyles} id="message" required
                         ></textarea>
                     </div>
                 </div>
                 <div>
                     <button
                         class="text-white rounded font-light border border-gray-800 bg-gray-800 text-center p-3"
-                        >Verzenden</button
+                        type="submit">Verzenden</button
                     >
                 </div>
             </form>

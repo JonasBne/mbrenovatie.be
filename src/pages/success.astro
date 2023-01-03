@@ -1,0 +1,20 @@
+---
+import PrimaryLink from "../components/links/PrimaryLink.astro";
+import SecondaryLink from "../components/links/SecondaryLink.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Bedankt voor je bericht!">
+    <article class="px-6 mt-6">
+        <p class="font-bold text-2xl mb-4 md:text-4xl">Bedankt!</p>
+        <p class="font-light md:text-xl">
+            We hebben je bericht goed ontvangen en contacteren je zo spoedig
+            mogelijk.
+        </p>
+        <SecondaryLink
+            label="Terug naar home"
+            linkTo="/"
+            styles="block mt-6 md:w-fit md:mt-10"
+        />
+    </article>
+</Layout>
