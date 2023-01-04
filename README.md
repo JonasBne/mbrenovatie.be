@@ -21,3 +21,4 @@ This website is work in progress and will be released soon. More info will be ad
 -   [ ] test form submit on netlify
 -   [ ] prop alignment of images on index page --> maybe create an Image Grid?
 -   [ ] make images smaller om home page on larger screens (especially if xl)
+-   [ ] make spacing even
