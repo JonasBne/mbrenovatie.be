@@ -29,15 +29,15 @@ const activeListItemStyles = "text-gray-800 border-b-[1px] border-gray-800";
             <li
                 class={classnames(
                     defaultListItemStyles,
-                    currentPath === "galery" && activeListItemStyles
+                    currentPath.includes("galerij") && activeListItemStyles
                 )}
             >
-                <a href="/galery">Galerij</a>
+                <a href="/galerij">Galerij</a>
             </li>
             <li
                 class={classnames(
                     defaultListItemStyles,
-                    (currentPath === "contact" || currentPath === "success") &&
+                    (currentPath === "contact" || currentPath === "succes") &&
                         activeListItemStyles
                 )}
             >
