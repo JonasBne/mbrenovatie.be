@@ -38,7 +38,7 @@ const keyWordStyles =
             >
                 <PrimaryLink
                     label="Bekijk onze werken"
-                    linkTo="/galery"
+                    linkTo="/galerij"
                     styles="mb-4 lg:mb-0 lg:w-fit lg:mx-4"
                 />
                 <SecondaryLink
@@ -56,34 +56,21 @@ const keyWordStyles =
             Recente werken
         </h3>
         <div class="flex flex-col lg:grid lg:grid-cols-3 gap-4 justify-between">
-            <div class="flex flex-col mb-4">
-                <ImageModal
-                    imageId="01"
-                    imageAlt="Ingemaakte kast woonkamer met zwevend schab"
-                    imageSrc="../images/carpentry/built-in-closet-kontich-img03.jpeg"
-                />
-                <p class="text-gray-700 font-light">
-                    Ingemaakte kast woonkamer met zwevend schab
-                </p>
-            </div>
-            <div class="flex flex-col">
-                <ImageModal
-                    imageId="02"
-                    imageAlt="Zwevend tv-meubel in houtsoort MDF (gelakt)"
-                    imageSrc="../images/carpentry/floating-tv-closet-mortsel-img04.png"
-                />
-                <p class="text-gray-700 font-light">
-                    Zwevend tv-meubel in houtsoort MDF (gelakt)
-                </p>
-            </div>
-            <div class="flex flex-col">
-                <ImageModal
-                    imageId="03"
-                    imageAlt="Ingemaakte kast"
-                    imageSrc="../images/carpentry/built-in-closet-kontich-img01.jpeg"
-                />
-                <p class="text-gray-700 font-light">Ingemaakte kast</p>
-            </div>
+            <ImageModal
+                imageId="01"
+                imageAlt="Ingemaakte kast woonkamer met zwevend schab"
+                imageSrc="../images/carpentry/built-in-closet-kontich-img03.jpeg"
+            />
+            <ImageModal
+                imageId="02"
+                imageAlt="Zwevend tv-meubel in houtsoort MDF (gelakt)"
+                imageSrc="../images/carpentry/floating-tv-closet-mortsel-img04.png"
+            />
+            <ImageModal
+                imageId="03"
+                imageAlt="Ingemaakte kast"
+                imageSrc="../images/carpentry/built-in-closet-kontich-img01.jpeg"
+            />
         </div>
         <div class="flex items-center justify-center my-8 lg:my-12">
             <SecondaryLink label="Bekijk alle werken" linkTo="/galery" />

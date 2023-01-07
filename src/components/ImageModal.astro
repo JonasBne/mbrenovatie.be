@@ -126,18 +126,11 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
 
     modalElement.appendChild(modalImgElement);
 
-    // caption and append to modal as child
-    const captionElement = document.createElement("div");
-    captionElement.className = "caption";
-
-    modalElement.appendChild(captionElement);
-
     // for each modal image on the screen, insert it into the modal
     // and add the alt text as caption
     Array.from(images).forEach((img) => {
         img.onclick = () => {
             modalImgElement.src = img.src;
-            captionElement.innerHTML = img.alt;
             // append modal to body
             document.body.appendChild(modalElement);
         };
