@@ -11,13 +11,11 @@ const keyWordStyles =
 
 <Layout title="Welkom!">
     <div class="flex flex-col lg:flex-row">
-        <aside class="lg:pl-6">
-            <Image
-                alt="foto van zwevend tv-meubel"
-                src={import("../images/kitchens/kitchen-kontich-img01.jpeg")}
-                class="lg:rounded-md lg:h-[80%] lg:w-auto"
-            />
-        </aside>
+        <Image
+            alt="foto van zwevend tv-meubel"
+            src={import("../images/kitchens/kitchen-kontich-img01.jpeg")}
+            class="lg:rounded-md pl-6 lg:w-[80vh] lg:h-auto"
+        />
         <article class="px-6 mt-6 lg:mt-0 lg:ml-2">
             <div>
                 <p class={keyWordStyles}>Schrijnwerkerij</p>
@@ -51,7 +49,7 @@ const keyWordStyles =
     </div>
     <aside class="px-6">
         <h3
-            class="text-gray-900 text-xl font-semibold mb-4 lg:font-bold lg:text-3xl lg:mb-8"
+            class="text-gray-900 text-xl font-semibold mb-4 mt-12 lg:font-bold lg:text-3xl lg:mb-8"
         >
             Recente werken
         </h3>
