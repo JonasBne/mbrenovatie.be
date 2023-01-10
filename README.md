@@ -7,14 +7,14 @@ This website is work in progress and will be released soon. More info will be ad
 ## To do
 
 -   [ ] Cleanup styles
--   [ ] Galery page & responsive design
+-   [x] Galery page & responsive design
 -   [x] Mail-to action footer
 -   [x] Contact form & responsive design
 -   [ ] Setup hosting
 -   [ ] SEO
 -   [x] Styling of image modal (better alignment etc)
 -   [ ] form validation
--   [ ] form responsive design
+-   [x] form responsive design
 -   [ ] form submit
 -   [ ] add VAT number
 -   [ ] check netlify (forms) vs vercel (formspree) + pricing
@@ -23,3 +23,4 @@ This website is work in progress and will be released soon. More info will be ad
 -   [ ] make images smaller om home page on larger screens (especially if xl)
 -   [ ] make spacing even on all pages (top and bottom margin)
 -   [ ] add breadcrumb to return from specific category to full category list
+- [ ] add scroll animations
