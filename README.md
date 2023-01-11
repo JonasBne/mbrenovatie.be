@@ -22,5 +22,5 @@ This website is work in progress and will be released soon. More info will be ad
 -   [ ] prop alignment of images on index page --> maybe create an Image Grid?
 -   [ ] make images smaller om home page on larger screens (especially if xl)
 -   [ ] make spacing even on all pages (top and bottom margin)
--   [ ] add breadcrumb to return from specific category to full category list
-- [ ] add scroll animations
+-   [x] add breadcrumb to return from specific category to full category list
+-   [ ] add scroll animations

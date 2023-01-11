@@ -15,13 +15,12 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
     id={`image-${imageId}`}
     alt={imageAlt}
     src={import(imageSrc)}
-    class="modal-image rounded-md mb-4"
+    class="modal-image mb-4"
 />
 
 <!-- style must be injected globally because the modal is appended as a direct child of the body -->
 <style is:global>
     .modal-image {
-        border-radius: 5px;
         cursor: pointer;
         transition: 0.3s;
     }
