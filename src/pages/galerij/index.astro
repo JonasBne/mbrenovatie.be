@@ -1,35 +1,35 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PrimaryCard from "../../components/PrimaryCard.astro";
-import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
+import { appUrls } from "../../consts/appUrls";
 ---
 
 <Layout title="Galerij">
     <article
         class="px-6 my-6 sm:grid sm:grid-cols-2 gap-6 lg:grid-cols-3 justify-between"
     >
-        <a href="/galerij/schrijn-en-meubelmakerij" class="mb-6">
+        <a href={appUrls.galery.carpentry} class="mb-6">
             <PrimaryCard
                 heading="Schrijn- & Meubelmakerij"
                 imageSrc="../images/kitchens/kitchen-kontich-img01.jpeg"
                 imageAlt="Een op maat gemaakte keuken"
             />
         </a>
-        <a href="/galerij/gyproc-en-schilderwerken" class="mb-6">
+        <a href={appUrls.galery.plasterBoardsAndPainting} class="mb-6">
             <PrimaryCard
                 heading="Gyproc- & Schilderwerken"
                 imageSrc="../images/plaster-boards-and-painting/living-room-plaster-mortsel-img01.jpg"
                 imageAlt="Een gerenoveerde zolderverdieping in pleisterplaten"
             />
         </a>
-        <a href="/galerij/buitenwerken" class="mb-6">
+        <a href={appUrls.galery.outside} class="mb-6">
             <PrimaryCard
                 heading="Buitenwerken"
                 imageSrc="../images/outside/garden-house-mortsel-img01.jpg"
                 imageAlt="Houten tuinscherm- en huis"
             />
         </a>
-        <a href="/galerij/vloer-en-tegelwerken" class="mb-6">
+        <a href={appUrls.galery.flooringAndTiles} class="mb-6">
             <PrimaryCard
                 heading="Vloer- & tegelwerken"
                 imageSrc="../images/plaster-boards-and-painting/attic-renovated-plasterboards-painted-img01.jpeg"

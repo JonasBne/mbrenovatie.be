@@ -1,5 +1,6 @@
 ---
 import classnames from "classnames";
+import { appUrls } from "../consts/appUrls";
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
@@ -13,7 +14,7 @@ const activeListItemStyles = "text-gray-800 border-b-[1px] border-gray-800";
     <nav class="flex items-center justify-between">
         <a
             class="text-gray-900 font-bold text-xl md:text-2xl lg:text-3xl"
-            href="/">MB Renovatie</a
+            href={appUrls.home.base}>MB Renovatie</a
         >
         <ul class="flex items-center">
             <li
@@ -24,7 +25,7 @@ const activeListItemStyles = "text-gray-800 border-b-[1px] border-gray-800";
                     "md:visible"
                 )}
             >
-                <a href="/">Home</a>
+                <a href={appUrls.home.base}>Home</a>
             </li>
             <li
                 class={classnames(
@@ -32,7 +33,7 @@ const activeListItemStyles = "text-gray-800 border-b-[1px] border-gray-800";
                     currentPath.includes("galerij") && activeListItemStyles
                 )}
             >
-                <a href="/galerij">Galerij</a>
+                <a href={appUrls.galery.base}>Galerij</a>
             </li>
             <li
                 class={classnames(
@@ -41,7 +42,7 @@ const activeListItemStyles = "text-gray-800 border-b-[1px] border-gray-800";
                         activeListItemStyles
                 )}
             >
-                <a href="/contact">Contact</a>
+                <a href={appUrls.contact.base}>Contact</a>
             </li>
         </ul>
     </nav>

@@ -4,6 +4,7 @@ import { Image } from "@astrojs/image/components";
 import PrimaryLink from "../components/links/PrimaryLink.astro";
 import SecondaryLink from "../components/links/SecondaryLink.astro";
 import ImageModal from "../components/ImageModal.astro";
+import { appUrls } from "../consts/appUrls";
 
 const keyWordStyles =
     "font-semibold mb-2 text-gray-900 text-3xl lg:font-bold lg:mb-4 lg:mx-4 lg:text-3xl";
@@ -36,24 +37,22 @@ const keyWordStyles =
             >
                 <PrimaryLink
                     label="Bekijk onze werken"
-                    linkTo="/galerij"
+                    linkTo={appUrls.galery.base}
                     styles="mb-4 lg:mb-0 lg:w-fit lg:mx-4"
                 />
                 <SecondaryLink
                     label="Stel ons je vraag"
-                    linkTo="/contact"
+                    linkTo={appUrls.contact.base}
                     styles="lg:w-fit lg:mx-4"
                 />
             </div>
         </article>
     </div>
     <aside class="px-6">
-        <h3
-            class="text-gray-900 text-xl font-semibold mb-4 mt-12 lg:font-bold lg:text-3xl lg:mb-8"
-        >
+        <h3 class="text-gray-700 text-xl mb-4 mt-12 lg:text-3xl lg:mb-8">
             Recente werken
         </h3>
-        <div class="flex flex-col lg:grid lg:grid-cols-3 gap-4 justify-between">
+        <div class="flex flex-col lg:grid lg:grid-cols-4 gap-2 justify-between">
             <ImageModal
                 imageId="01"
                 imageAlt="Ingemaakte kast woonkamer met zwevend schab"
@@ -66,12 +65,20 @@ const keyWordStyles =
             />
             <ImageModal
                 imageId="03"
-                imageAlt="Ingemaakte kast"
+                imageAlt="Ingemaakte kast slaapkamer"
                 imageSrc="../images/carpentry/built-in-closet-kontich-img01.jpeg"
+            />
+            <ImageModal
+                imageId="04"
+                imageAlt="Houten wand en tuinhuis"
+                imageSrc="../images/outside/garden-house-mortsel-img01.jpg"
             />
         </div>
         <div class="flex items-center justify-center my-8 lg:my-12">
-            <SecondaryLink label="Bekijk alle werken" linkTo="/galery" />
+            <SecondaryLink
+                label="Bekijk alle werken"
+                linkTo={appUrls.galery.base}
+            />
         </div>
     </aside>
 </Layout>
