@@ -20,7 +20,7 @@ This website is work in progress and will be released soon. More info will be ad
 -   [ ] check netlify (forms) vs vercel (formspree) + pricing
 -   [ ] test form submit on netlify
 -   [ ] prop alignment of images on index page --> maybe create an Image Grid?
--   [ ] make images smaller om home page on larger screens (especially if xl)
--   [ ] make spacing even on all pages (top and bottom margin)
+-   [x] make images smaller om home page on larger screens (especially if xl)
+-   [x] make spacing even on all pages (top and bottom margin)
 -   [x] add breadcrumb to return from specific category to full category list
 -   [ ] add scroll animations
