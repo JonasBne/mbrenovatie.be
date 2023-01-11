@@ -1,7 +1,7 @@
 ---
 export interface Breadcrumb {
     label: string;
-    linkTo: string;
+    linkTo?: string;
 }
 
 export interface Props {
@@ -15,9 +15,13 @@ const { breadcrumbs } = Astro.props;
     {
         breadcrumbs.map((breadcrumb) => (
             <li>
-                <a href={breadcrumb.linkTo}>
+                {breadcrumb.linkTo ? (
+                    <a href={breadcrumb.linkTo}>
+                        <p>{breadcrumb.label}</p>
+                    </a>
+                ) : (
                     <p>{breadcrumb.label}</p>
-                </a>
+                )}
             </li>
         ))
     }
@@ -25,20 +29,19 @@ const { breadcrumbs } = Astro.props;
 
 <style>
     ul.breadcrumb {
-        padding: 10px 24px;
+        padding-left: 24px;
         list-style: none;
     }
 
     ul.breadcrumb li {
         display: inline-flex;
         align-items: center;
-        font-size: 18px;
+        font-weight: lighter;
     }
 
     /* Add a slash symbol (/) before/behind each list item */
     ul.breadcrumb li + li:before {
         padding: 8px;
-        color: black;
         content: "/\00a0";
     }
 

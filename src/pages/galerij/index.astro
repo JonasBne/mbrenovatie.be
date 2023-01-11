@@ -2,9 +2,18 @@
 import Layout from "../../layouts/Layout.astro";
 import PrimaryCard from "../../components/PrimaryCard.astro";
 import { appUrls } from "../../consts/appUrls";
+import Breadcrumbs, {
+    Breadcrumb,
+} from "../../components/links/Breadcrumbs.astro";
+
+const breadcrumbs: Breadcrumb[] = [
+    { label: "Home", linkTo: appUrls.home.base },
+    { label: "Galerij" },
+];
 ---
 
 <Layout title="Galerij">
+    <Breadcrumbs breadcrumbs={breadcrumbs} />
     <article
         class="px-6 my-6 sm:grid sm:grid-cols-2 gap-6 lg:grid-cols-3 justify-between"
     >

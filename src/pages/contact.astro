@@ -1,6 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
+import Breadcrumbs from "../components/links/Breadcrumbs.astro";
+import { appUrls } from "../consts/appUrls";
+
+const breadcrumbs = [
+    { label: "Home", linkTo: appUrls.home.base },
+    { label: "Contact" },
+];
 
 const inputLabelStyles =
     "block uppercase tracking-wide text-gray-700 text-xs font-light mb-2";
@@ -10,6 +17,7 @@ const inputFieldStyles =
 ---
 
 <Layout title="Contact">
+    <Breadcrumbs breadcrumbs={breadcrumbs} />
     <div class="lg:grid lg:grid-cols-2 lg:mb-6">
         <aside class="lg:px-6 lg:my-6">
             <Image

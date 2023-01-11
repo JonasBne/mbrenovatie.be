@@ -1,5 +1,15 @@
 ---
+import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
+import { appUrls } from "../../consts/appUrls";
 import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+    { label: "Home", linkTo: appUrls.home.base },
+    { label: "Galerij", linkTo: appUrls.galery.base },
+    { label: "Vloer- & tegelwerken" },
+];
 ---
 
-<Layout title="Vloer- en tegelwerken"><div>Vloer- en tegelwerken</div></Layout>
+<Layout title="Vloer- en tegelwerken"
+    ><Breadcrumbs breadcrumbs={breadcrumbs} />
+</Layout>
