@@ -2,6 +2,7 @@
 import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
 import { appUrls } from "../../consts/appUrls";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
 
 const breadcrumbs = [
     { label: "Home", linkTo: appUrls.home.base },
@@ -10,6 +11,54 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title="Schrijnwerkerij"
-    ><Breadcrumbs breadcrumbs={breadcrumbs} />
+<Layout title="Schrijnwerkerij">
+    <Breadcrumbs breadcrumbs={breadcrumbs} />
+    <article class="px-6 my-4 grid grid-cols-1 gap-4">
+        <Image
+            alt="Zwevend tv-meubel"
+            src={import(
+                "../../images/carpentry/floating-tv-closet-mortsel-img01.png"
+            )}
+        />
+        <Image
+            alt="Zwevend tv-meubel"
+            src={import(
+                "../../images/bathrooms/bathroom-with-floating-closet-marble-kontich.jpeg"
+            )}
+        />
+        <Image
+            alt="Zwevend tv-meubel"
+            src={import(
+                "../../images/carpentry/built-in-closet-kontich-img01.jpeg"
+            )}
+        />
+        <Image
+            alt="Zwevend tv-meubel"
+            src={import(
+                "../../images/carpentry/built-in-closet-kontich-img03.jpeg"
+            )}
+        />
+        <Image
+            alt="Keuken met ingemaakte kasten"
+            src={import("../../images/kitchens/kitchen-kontich-img01.jpeg")}
+        />
+        <Image
+            alt="Zwevend meubel met spiegel"
+            src={import(
+                "../../images/bathrooms/bathroom-with-floating-closet-kontich.jpeg"
+            )}
+        />
+        <Image
+            alt="Zwevend meubel met spiegel"
+            src={import(
+                "../../images/bathrooms/bathroom-with-floating-closet.jpg"
+            )}
+        />
+        <Image
+            alt="Ingemaakte kast voor jassen en schoenen"
+            src={import(
+                "../../images/carpentry/closet-with-bench-mortsel-img01.jpg"
+            )}
+        />
+    </article>
 </Layout>
