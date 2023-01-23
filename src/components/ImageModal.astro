@@ -3,7 +3,11 @@ import { Image } from "@astrojs/image/components";
 
 export interface Props {
     imageId: string;
-    imageSrc: string;
+    imageSrc: Promise<
+        | typeof import("*.png")
+        | typeof import("*.jpeg")
+        | typeof import("*.jpg")
+    >;
     imageAlt: string;
 }
 
@@ -14,7 +18,7 @@ const { imageId, imageSrc, imageAlt } = Astro.props;
 <Image
     id={`image-${imageId}`}
     alt={imageAlt}
-    src={import(imageSrc)}
+    src={imageSrc}
     class="modal-image mb-4"
 />
 
