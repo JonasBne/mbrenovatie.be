@@ -3,7 +3,7 @@ const inputLabelStyles =
     "block uppercase tracking-wide text-gray-700 text-xs font-light mb-2";
 
 const inputFieldStyles =
-    "appearance-none block w-full bg-gray-50 text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white";
+    "input block w-full bg-gray-50 text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white";
 ---
 
 <form
@@ -60,8 +60,27 @@ const inputFieldStyles =
     </div>
     <div>
         <button
-            class="text-white rounded font-light border border-gray-800 bg-gray-800 text-center p-3"
+            id="submit-btn"
+            class="text-white rounded font-light border border-gray-800 bg-gray-800 text-center p-3 disabled:bg-gray-300 disabled:border-gray-300"
             type="submit">Verzenden</button
         >
     </div>
 </form>
+
+<script>
+    const submitBtn = document.getElementById(
+        "submit-btn"
+    ) as HTMLButtonElement;
+    // disable by default
+    submitBtn.disabled = true;
+
+    const firstNameInput = document.getElementById(
+        "first-name"
+    ) as HTMLInputElement;
+    console.log("input", firstNameInput);
+    firstNameInput.addEventListener("input", () => {
+        if (firstNameInput.value.trim().length > 0) {
+            submitBtn.disabled = false;
+        }
+    });
+</script>
