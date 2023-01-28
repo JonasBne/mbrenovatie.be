@@ -2,6 +2,7 @@
 import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
 import { appUrls } from "../../consts/appUrls";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
 
 const breadcrumbs = [
     { label: "Home", linkTo: appUrls.home.base },
@@ -10,6 +11,54 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title="Vloer- en tegelwerken"
-    ><Breadcrumbs breadcrumbs={breadcrumbs} />
+<Layout title="Vloer- en tegelwerken">
+    <Breadcrumbs breadcrumbs={breadcrumbs} />
+    <article
+        class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+    >
+        <Image
+            alt="Parket vloer"
+            src={import("../../images/floors-and-tiles/flooring-img01.jpg")}
+        />
+        <Image
+            alt="Laminaat vloer"
+            src={import("../../images/floors-and-tiles/flooring-img02.jpg")}
+        />
+        <Image
+            alt="Laminaat vloer"
+            src={import("../../images/floors-and-tiles/flooring-img03.jpg")}
+        />
+        <Image
+            alt="Laminaat vloer"
+            src={import("../../images/floors-and-tiles/flooring-img04.jpg")}
+        />
+        <Image
+            alt="Laminaat vloer"
+            src={import("../../images/floors-and-tiles/flooring-img05.jpeg")}
+        />
+        <Image
+            alt="Laminaat vloer"
+            src={import("../../images/floors-and-tiles/flooring-img06.jpeg")}
+        />
+        <Image
+            alt="Laminaat vloer"
+            src={import("../../images/floors-and-tiles/flooring-img07.jpeg")}
+        />
+        <Image
+            alt="Betegelde toog met grijze verticale wandtegels"
+            src={import("../../images/floors-and-tiles/tiles-img01.jpeg")}
+        />
+        <Image
+            alt="Betegeld bad met wandtegels met marmeren look "
+            src={import("../../images/floors-and-tiles/tiles-img02.jpeg")}
+        />
+        <Image
+            alt="Betegeld bad met wandtegels met marmeren look "
+            src={import("../../images/floors-and-tiles/tiles-img03.jpeg")}
+        />
+        <Image
+            alt="Betegeld bad met wandtegels met marmeren look "
+            src={import("../../images/floors-and-tiles/tiles-img04.jpeg")}
+        />
+    </article>
 </Layout>
