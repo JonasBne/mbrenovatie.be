@@ -9,8 +9,8 @@ export interface Props {
 
 const { heading, imageAlt, imageSrc } = Astro.props;
 
-const headingStyles = "text-left text-gray-800 font-light md:text-lg";
-const imageStyles = "my-2 hover:shadow-2xl";
+const headingStyles = "text-left font-thin md:text-lg";
+const imageStyles = "my-2 hover:shadow-xl";
 ---
 
 <p class={headingStyles}>{heading}</p>
