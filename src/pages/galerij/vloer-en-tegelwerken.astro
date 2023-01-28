@@ -17,48 +17,67 @@ const breadcrumbs = [
         class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
     >
         <Image
-            alt="Parket vloer"
-            src={import("../../images/floors-and-tiles/flooring-img01.jpg")}
-        />
-        <Image
-            alt="Laminaat vloer"
-            src={import("../../images/floors-and-tiles/flooring-img02.jpg")}
-        />
-        <Image
-            alt="Laminaat vloer"
+            alt="Lichte laminaatvloer"
             src={import("../../images/floors-and-tiles/flooring-img03.jpg")}
-        />
-        <Image
-            alt="Laminaat vloer"
-            src={import("../../images/floors-and-tiles/flooring-img04.jpg")}
-        />
-        <Image
-            alt="Laminaat vloer"
-            src={import("../../images/floors-and-tiles/flooring-img05.jpeg")}
-        />
-        <Image
-            alt="Laminaat vloer"
-            src={import("../../images/floors-and-tiles/flooring-img06.jpeg")}
-        />
-        <Image
-            alt="Laminaat vloer"
-            src={import("../../images/floors-and-tiles/flooring-img07.jpeg")}
+            class="lg:max-h-[99%]"
         />
         <Image
             alt="Betegelde toog met grijze verticale wandtegels"
             src={import("../../images/floors-and-tiles/tiles-img01.jpeg")}
+            class="max-h-[99%]"
         />
         <Image
-            alt="Betegeld bad met wandtegels met marmeren look "
-            src={import("../../images/floors-and-tiles/tiles-img02.jpeg")}
+            alt="Badkamervloer met grijze tegels"
+            src={import("../../images/floors-and-tiles/flooring-img04.jpg")}
+        />
+        <div class="sm:flex sm:flex-col sm:justify-between">
+            <Image
+                alt="Lichte parketvloer"
+                src={import("../../images/floors-and-tiles/flooring-img01.jpg")}
+                class="mb-4 sm:mb-0"
+            />
+            <Image
+                alt="Lichte laminaatvloer"
+                src={import("../../images/floors-and-tiles/flooring-img02.jpg")}
+                class="lg:hidden"
+            />
+        </div>
+        <Image
+            alt="Donkeren laminaatvloer met knoesten"
+            src={import("../../images/floors-and-tiles/flooring-img05.jpeg")}
         />
         <Image
-            alt="Betegeld bad met wandtegels met marmeren look "
+            alt="Lichte laminaatvloer"
+            src={import("../../images/floors-and-tiles/flooring-img06.jpeg")}
+        />
+        <Image
+            alt="Badkamervloer met grijze tegels"
             src={import("../../images/floors-and-tiles/tiles-img03.jpeg")}
+            class="xl:w-[110vw]"
         />
+
+        <div class="sm:flex md:flex-col sm:justify-between">
+            <Image
+                alt="Betegeld bad met wandtegels met marmeren look "
+                src={import("../../images/floors-and-tiles/tiles-img02.jpeg")}
+                class="mb-4 sm:mb-0"
+            />
+            <Image
+                alt="Betegelde douche met wandtegels met marmeren look "
+                src={import("../../images/floors-and-tiles/tiles-img04.jpeg")}
+                class="mb-4 sm:mb-0"
+            />
+            <Image
+                alt="Lichte laminaatvloer"
+                src={import(
+                    "../../images/floors-and-tiles/flooring-img07.jpeg"
+                )}
+            />
+        </div>
         <Image
-            alt="Betegeld bad met wandtegels met marmeren look "
-            src={import("../../images/floors-and-tiles/tiles-img04.jpeg")}
+            alt="Betegelde douchewand met verticale groen-grijze wandtegels"
+            src={import("../../images/floors-and-tiles/tiles-img05.jpeg")}
+            class="xl:max-h-[99%]"
         />
     </article>
 </Layout>
