@@ -14,7 +14,7 @@ const { breadcrumbs } = Astro.props;
 <ul class="breadcrumb">
     {
         breadcrumbs.map((breadcrumb) => (
-            <li>
+            <li class="text-sm md:text-lg">
                 {breadcrumb.linkTo ? (
                     <a href={breadcrumb.linkTo}>
                         <p>{breadcrumb.label}</p>
