@@ -4,7 +4,7 @@ export const appUrls = {
     },
     galery: {
         base: "/galerij",
-        carpentry: "/galerij/schrijn-en-meubelmakerij",
+        carpentry: "/galerij/meubelmakerij",
         flooringAndTiles: "/galerij/vloer-en-tegelwerken",
         outside: "/galerij/buitenwerken",
         plasterBoardsAndPainting: "/galerij/gyproc-en-schilderwerken",

@@ -24,3 +24,4 @@ This website is work in progress and will be released soon. More info will be ad
 -   [x] make spacing even on all pages (top and bottom margin)
 -   [x] add breadcrumb to return from specific category to full category list
 -   [ ] add scroll animations
+-   [ ] add 404 page
