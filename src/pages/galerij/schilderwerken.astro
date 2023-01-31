@@ -1,0 +1,20 @@
+---
+import { appUrls } from "../../consts/appUrls";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
+import { Image } from "@astrojs/image/components";
+
+const breadcrumbs = [
+    { label: "Home", linkTo: appUrls.home.base },
+    { label: "Galerij", linkTo: appUrls.galery.base },
+    { label: "Schilderwerken" },
+];
+---
+
+<Layout title="Schilderwerken">
+    <Breadcrumbs breadcrumbs={breadcrumbs} />
+    <article
+        class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+    >
+    </article>
+</Layout>
