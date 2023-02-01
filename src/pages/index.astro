@@ -4,6 +4,11 @@ import { Image } from "@astrojs/image/components";
 import PrimaryLink from "../components/links/PrimaryLink.astro";
 import SecondaryLink from "../components/links/SecondaryLink.astro";
 import { appUrls } from "../consts/appUrls";
+import coverImage from "../images/kitchens/kitchen-img01.jpeg";
+import previewImage1 from "../images/carpentry/built-in-closet-kontich-img03.jpeg";
+import previewImage2 from "../images/carpentry/floating-tv-closet-mortsel-img01.png";
+import previewImage3 from "../images/carpentry/built-in-closet-kontich-img01.jpeg";
+import previewImage4 from "../images/outside/outside-img02.jpg";
 
 const keyWordStyles =
     "font-semibold mb-2 text-gray-900 text-3xl lg:font-bold lg:mb-4 lg:mx-4 lg:text-3xl";
@@ -13,7 +18,7 @@ const keyWordStyles =
     <div class="flex flex-col lg:flex-row lg:mt-12">
         <Image
             alt="foto van zwevend tv-meubel"
-            src={import("../images/kitchens/kitchen-kontich-img01.jpeg")}
+            src={coverImage}
             class="lg:pl-6 lg:w-[90vh] lg:h-auto"
         />
         <article class="px-6 mt-6 lg:mt-0 lg:ml-2">
@@ -54,26 +59,14 @@ const keyWordStyles =
         <div class="flex flex-col lg:grid lg:grid-cols-4 gap-4 justify-between">
             <Image
                 alt="Ingemaakte kast woonkamer met zwevend schab"
-                src={import(
-                    "../images/carpentry/built-in-closet-kontich-img03.jpeg"
-                )}
+                src={previewImage1}
             />
             <Image
                 alt="Zwevend tv-meubel in houtsoort MDF (gelakt)"
-                src={import(
-                    "../images/carpentry/floating-tv-closet-mortsel-img01.png"
-                )}
+                src={previewImage2}
             />
-            <Image
-                alt="Ingemaakte kast slaapkamer"
-                src={import(
-                    "../images/carpentry/built-in-closet-kontich-img01.jpeg"
-                )}
-            />
-            <Image
-                alt="Houten wand en tuinhuis"
-                src={import("../images/outside/outside-img02.jpg")}
-            />
+            <Image alt="Ingemaakte kast slaapkamer" src={previewImage3} />
+            <Image alt="Houten wand en tuinhuis" src={previewImage4} />
         </div>
         <div class="flex items-center justify-center my-8 lg:my-12">
             <SecondaryLink

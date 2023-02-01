@@ -3,7 +3,7 @@ import { Image } from "@astrojs/image/components";
 
 export interface Props {
     heading: string;
-    imageSrc: string;
+    imageSrc: ImageMetadata;
     imageAlt: string;
 }
 
@@ -14,4 +14,4 @@ const imageStyles = "my-2 hover:shadow-xl";
 ---
 
 <p class={headingStyles}>{heading}</p>
-<Image class={imageStyles} src={import(imageSrc)} alt={imageAlt} />
+<Image class={imageStyles} src={imageSrc} alt={imageAlt} />

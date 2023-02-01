@@ -5,6 +5,11 @@ import { appUrls } from "../../consts/appUrls";
 import Breadcrumbs, {
     Breadcrumb,
 } from "../../components/links/Breadcrumbs.astro";
+import coverImageCarpentry from "../../images/kitchens/kitchen-img01.jpeg";
+import coverImagePlasterBoards from "../../images/plaster-boards/plaster-boards-img02.jpg";
+import coverImagePainting from "../../images/painting-and-wallpapers/painting-img10.jpeg";
+import coverImageOutside from "../../images/outside/outside-img02.jpg";
+import coverImageFlooring from "../../images/plaster-boards/attic-renovated-plasterboards-painted-img01.jpeg";
 
 const breadcrumbs: Breadcrumb[] = [
     { label: "Home", linkTo: appUrls.home.base },
@@ -22,35 +27,35 @@ const breadcrumbs: Breadcrumb[] = [
         <a href={appUrls.galery.carpentry} class="mb-6 md:mb-0">
             <PrimaryCard
                 heading="Meubelmakerij"
-                imageSrc="../images/kitchens/kitchen-kontich-img01.jpeg"
+                imageSrc={coverImageCarpentry}
                 imageAlt="Een op maat gemaakte keuken"
             />
         </a>
         <a href={appUrls.galery.plasterBoards} class="mb-6 md:mb-0">
             <PrimaryCard
                 heading="Gyprocwerken"
-                imageSrc="../images/plaster-boards/plaster-boards-img02.jpg"
+                imageSrc={coverImagePlasterBoards}
                 imageAlt="Een gerenoveerde zolderverdieping in pleisterplaten"
             />
         </a>
         <a href={appUrls.galery.painting} class="mb-6 md:mb-0">
             <PrimaryCard
                 heading="Schilder- & behangwerken"
-                imageSrc="../images/painting-and-wallpapers/painting-img10.jpeg"
+                imageSrc={coverImagePainting}
                 imageAlt="Een gerenoveerde zolderverdieping in pleisterplaten"
             />
         </a>
         <a href={appUrls.galery.outside} class="mb-6 md:mb-0">
             <PrimaryCard
                 heading="Buitenwerken"
-                imageSrc="../images/outside/outside-img02.jpg"
+                imageSrc={coverImageOutside}
                 imageAlt="Houten tuinscherm- en huis"
             />
         </a>
         <a href={appUrls.galery.flooringAndTiles} class="mb-6 md:mb-0">
             <PrimaryCard
                 heading="Vloer- & tegelwerken"
-                imageSrc="../images/plaster-boards/attic-renovated-plasterboards-painted-img01.jpeg"
+                imageSrc={coverImageFlooring}
                 imageAlt="Een gerenoveerde zolderverdieping in pleisterplaten"
             />
         </a>
