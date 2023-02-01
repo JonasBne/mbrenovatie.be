@@ -6,22 +6,6 @@ This website is work in progress and will be released soon. More info will be ad
 
 ## To do
 
--   [ ] Cleanup styles
--   [x] Galery page & responsive design
--   [x] Mail-to action footer
--   [x] Contact form & responsive design
--   [ ] Setup hosting
--   [ ] SEO
--   [x] Styling of image modal (better alignment etc)
--   [ ] form validation
--   [x] form responsive design
+-   [ ] SEO (https://github.com/jonasmerlin/astro-seo)
+-   [ ] Hosting & deploy (https://docs.astro.build/en/guides/deploy/)
 -   [ ] form submit
--   [ ] add VAT number
--   [ ] check netlify (forms) vs vercel (formspree) + pricing
--   [ ] test form submit on netlify
--   [ ] prop alignment of images on index page --> maybe create an Image Grid?
--   [x] make images smaller om home page on larger screens (especially if xl)
--   [x] make spacing even on all pages (top and bottom margin)
--   [x] add breadcrumb to return from specific category to full category list
--   [ ] add scroll animations
--   [ ] add 404 page
