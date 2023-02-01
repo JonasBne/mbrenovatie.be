@@ -7,7 +7,7 @@ import { Image } from "@astrojs/image/components";
 const breadcrumbs = [
     { label: "Home", linkTo: appUrls.home.base },
     { label: "Galerij", linkTo: appUrls.galery.base },
-    { label: "Schilderwerken" },
+    { label: "Schilder- en behangwerken" },
 ];
 ---
 
@@ -17,65 +17,57 @@ const breadcrumbs = [
         class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3"
     >
         <Image
-            alt="Schilderwerken"
-            src={import(
-                "../../images/plaster-boards-and-painting/painting-img01.jpg"
-            )}
-        />
-        <Image
-            alt="Schilderwerken"
-            src={import(
-                "../../images/plaster-boards-and-painting/painting-img02.jpeg"
-            )}
-        />
-        <Image
-            alt="Houten garagepoort zwart geschilderd"
-            src={import(
-                "../../images/plaster-boards-and-painting/painting-img06.jpeg"
-            )}
-        />
-        <Image
             alt="Schilderwerken woonkamer"
             src={import(
-                "../../images/plaster-boards-and-painting/painting-img08.jpg"
+                "../../images/painting-and-wallpapers/painting-img08.jpg"
             )}
         />
         <Image
             alt="Schilderwerken slaapkamer"
             src={import(
-                "../../images/plaster-boards-and-painting/painting-img09.jpeg"
+                "../../images/painting-and-wallpapers/painting-img09.jpeg"
             )}
         />
         <Image
             alt="Gerenoveerde zolderverdieping"
             src={import(
-                "../../images/plaster-boards-and-painting/attic-renovated-plasterboards-painted-img01.jpeg"
+                "../../images/plaster-boards/attic-renovated-plasterboards-painted-img01.jpeg"
             )}
         />
-        <div class="xl:flex xl:flex-col xl:justify-around">
-            <Image
-                alt="Schilderwerken"
-                src={import(
-                    "../../images/plaster-boards-and-painting/painting-img04.jpeg"
-                )}
-            />
-            <Image
-                alt="Schilderwerken keuken"
-                src={import(
-                    "../../images/plaster-boards-and-painting/painting-img05.jpeg"
-                )}
-            />
-        </div>
+        <Image
+            alt="Schilderwerken"
+            src={import(
+                "../../images/painting-and-wallpapers/painting-img04.jpeg"
+            )}
+        />
+        <Image
+            alt="Schilderwerken keuken"
+            src={import(
+                "../../images/painting-and-wallpapers/painting-img05.jpeg"
+            )}
+        />
+        <Image
+            alt="Muurbehang goud"
+            src={import(
+                "../../images/painting-and-wallpapers/painting-img10.jpeg"
+            )}
+        />
+        <Image
+            alt="Schilderwerken"
+            src={import(
+                "../../images/painting-and-wallpapers/painting-img02.jpeg"
+            )}
+        />
+        <Image
+            alt="Houten garagepoort zwart geschilderd"
+            src={import(
+                "../../images/painting-and-wallpapers/painting-img06.jpeg"
+            )}
+        />
         <Image
             alt="Wc behangen met bloemenmotief"
             src={import(
-                "../../images/plaster-boards-and-painting/painting-img03.jpeg"
-            )}
-        />
-        <Image
-            alt="Voordeur PVC zwart geschilderd"
-            src={import(
-                "../../images/plaster-boards-and-painting/painting-img07.jpeg"
+                "../../images/painting-and-wallpapers/painting-img03.jpeg"
             )}
         />
     </article>
