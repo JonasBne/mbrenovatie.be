@@ -9,7 +9,7 @@ const inputFieldStyles =
 <form
     data-netlify="true"
     netlify-honeypot="bot-field"
-    action="/success"
+    action="/succes"
     class="mb-6"
     name="contact"
     method="POST"
@@ -61,26 +61,8 @@ const inputFieldStyles =
     <div>
         <button
             id="submit-btn"
-            class="text-white rounded font-light border border-gray-800 bg-gray-800 text-center p-3 disabled:bg-gray-300 disabled:border-gray-300"
+            class="text-white rounded font-light border border-gray-800 bg-gray-800 text-center p-3"
             type="submit">Verzenden</button
         >
     </div>
 </form>
-
-<script>
-    const submitBtn = document.getElementById(
-        "submit-btn"
-    ) as HTMLButtonElement;
-    // disable by default
-    submitBtn.disabled = true;
-
-    const firstNameInput = document.getElementById(
-        "first-name"
-    ) as HTMLInputElement;
-    console.log("input", firstNameInput);
-    firstNameInput.addEventListener("input", () => {
-        if (firstNameInput.value.trim().length > 0) {
-            submitBtn.disabled = false;
-        }
-    });
-</script>
