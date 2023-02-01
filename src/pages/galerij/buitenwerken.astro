@@ -2,6 +2,7 @@
 import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
 import { appUrls } from "../../consts/appUrls";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
 
 const breadcrumbs = [
     { label: "Home", linkTo: appUrls.home.base },
@@ -12,4 +13,32 @@ const breadcrumbs = [
 
 <Layout title="Buitenwerken">
     <Breadcrumbs breadcrumbs={breadcrumbs} />
+    <article
+        class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3"
+    >
+        <Image
+            alt="Zwembad met houten loopplanken"
+            src={import("../../images/outside/outside-img03.jpg")}
+        />
+        <Image
+            alt="Houten wand en tuinhuis"
+            src={import("../../images/outside/outside-img02.jpg")}
+        />
+        <Image
+            alt="Vernieuwde houten voordeur"
+            src={import("../../images/outside/outside-img05.jpeg")}
+        />
+        <Image
+            alt="Gevelwerken met stelling"
+            src={import("../../images/outside/outside-img06.jpeg")}
+        />
+        <Image
+            alt="Gerenoveerde gevel"
+            src={import("../../images/outside/outside-img01.jpg")}
+        />
+        <Image
+            alt="Houten tuinwand"
+            src={import("../../images/outside/outside-img04.jpeg")}
+        />
+    </article>
 </Layout>
