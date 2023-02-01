@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 import PrimaryLink from "../components/links/PrimaryLink.astro";
 import SecondaryLink from "../components/links/SecondaryLink.astro";
-import ImageModal from "../components/ImageModal.astro";
 import { appUrls } from "../consts/appUrls";
 
 const keyWordStyles =
@@ -53,33 +52,27 @@ const keyWordStyles =
             Recente werken
         </h3>
         <div class="flex flex-col lg:grid lg:grid-cols-4 gap-2 justify-between">
-            <ImageModal
-                imageId="01"
-                imageAlt="Ingemaakte kast woonkamer met zwevend schab"
-                imageSrc={import(
+            <Image
+                alt="Ingemaakte kast woonkamer met zwevend schab"
+                src={import(
                     "../images/carpentry/built-in-closet-kontich-img03.jpeg"
                 )}
             />
-            <ImageModal
-                imageId="02"
-                imageAlt="Zwevend tv-meubel in houtsoort MDF (gelakt)"
-                imageSrc={import(
+            <Image
+                alt="Zwevend tv-meubel in houtsoort MDF (gelakt)"
+                src={import(
                     "../images/carpentry/floating-tv-closet-mortsel-img01.png"
                 )}
             />
-            <ImageModal
-                imageId="03"
-                imageAlt="Ingemaakte kast slaapkamer"
-                imageSrc={import(
+            <Image
+                alt="Ingemaakte kast slaapkamer"
+                src={import(
                     "../images/carpentry/built-in-closet-kontich-img01.jpeg"
                 )}
             />
-            <ImageModal
-                imageId="04"
-                imageAlt="Houten wand en tuinhuis"
-                imageSrc={import(
-                    "../images/outside/garden-house-mortsel-img01.jpg"
-                )}
+            <Image
+                alt="Houten wand en tuinhuis"
+                src={import("../images/outside/outside-img02.jpg")}
             />
         </div>
         <div class="flex items-center justify-center my-8 lg:my-12">
