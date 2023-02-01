@@ -1,0 +1,75 @@
+---
+import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
+import { appUrls } from "../../consts/appUrls";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+
+const breadcrumbs = [
+    { label: "Home", linkTo: appUrls.home.base },
+    { label: "Galerij", linkTo: appUrls.galery.base },
+    { label: "Gyprocwerken" },
+];
+---
+
+<Layout title="Gyproc- en schilderwerken">
+    <Breadcrumbs breadcrumbs={breadcrumbs} />
+    <article
+        class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3"
+    >
+        <div>
+            <Image
+                alt="Gyprocwerken"
+                src={import(
+                    "../../images/plaster-boards-and-painting/plaster-boards-img02.jpg"
+                )}
+                class="mb-3"
+            />
+            <Image
+                alt="Gyprocwerken"
+                src={import(
+                    "../../images/plaster-boards-and-painting/plaster-boards-img03.jpg"
+                )}
+            />
+        </div>
+        <Image
+            alt="Gyprocwerken"
+            src={import(
+                "../../images/plaster-boards-and-painting/plaster-boards-img04.jpg"
+            )}
+        />
+        <Image
+            alt="Gyprocwerken"
+            src={import(
+                "../../images/plaster-boards-and-painting/plaster-boards-img06.jpg"
+            )}
+        />
+        <Image
+            alt="Gyprocwerken"
+            src={import(
+                "../../images/plaster-boards-and-painting/plaster-boards-img07.jpg"
+            )}
+        />
+        <div>
+            <Image
+                alt="Gyprocwerken"
+                src={import(
+                    "../../images/plaster-boards-and-painting/plaster-boards-img09.jpeg"
+                )}
+                class="mb-4"
+            />
+            <Image
+                alt="Gyprocwerken"
+                src={import(
+                    "../../images/plaster-boards-and-painting/plaster-boards-img11.jpeg"
+                )}
+            />
+        </div>
+        <Image
+            alt="Gyprocwerken traphal"
+            src={import(
+                "../../images/plaster-boards-and-painting/plaster-boards-img08.jpeg"
+            )}
+            class="sm:h-[55vh] md:h-[62vh] lg:h-[66vh] xl:h-[51vh] 2xl:h-[92vh]"
+        />
+    </article>
+</Layout>
