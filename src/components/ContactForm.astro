@@ -20,6 +20,11 @@ const inputFieldStyles =
         </label>
     </p>
     <input type="hidden" name="contact" value="feedback" />
+    <input
+        type="hidden"
+        name="subject"
+        value="Nieuwe aanvraag via website mbrenovatie.business.site"
+    />
     <div class="grid grid-cols-1 -mx-3 mb-6">
         <div class="grid grid-cols-2">
             <div class="px-3">
@@ -29,6 +34,7 @@ const inputFieldStyles =
                 <input
                     class={inputFieldStyles}
                     id="first-name"
+                    name="first-name"
                     type="text"
                     required
                 />
@@ -40,6 +46,7 @@ const inputFieldStyles =
                 <input
                     class={inputFieldStyles}
                     id="last-name"
+                    name="last-name"
                     type="text"
                     required
                 />
@@ -47,15 +54,31 @@ const inputFieldStyles =
         </div>
         <div class="px-3">
             <label class={inputLabelStyles} for="subject"> Onderwerp *</label>
-            <input class={inputFieldStyles} id="subject" type="text" required />
+            <input
+                class={inputFieldStyles}
+                id="subject"
+                name="subject"
+                type="text"
+                required
+            />
         </div>
         <div class="px-3">
             <label class={inputLabelStyles} for="email">Email *</label>
-            <input class={inputFieldStyles} id="email" type="email" required />
+            <input
+                class={inputFieldStyles}
+                id="email"
+                name="email"
+                type="email"
+                required
+            />
         </div>
         <div class="px-3">
             <label class={inputLabelStyles} for="message"> Bericht *</label>
-            <textarea class={inputFieldStyles} id="message" required></textarea>
+            <textarea
+                class={inputFieldStyles}
+                id="message"
+                name="message"
+                required></textarea>
         </div>
     </div>
     <div>
