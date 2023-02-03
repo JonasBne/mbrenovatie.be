@@ -3,13 +3,10 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SEO } from "astro-seo";
 
-export interface Props {
-    seoTitle: string;
-    seoDescription: string;
-    title: string;
-}
-
-const { title, seoTitle, seoDescription } = Astro.props;
+const title =
+    "MB Renovatie - Alle soorten klussen onder één dak. De expertise van een ervaren schrijnwerker voor al uw projecten, groot of klein.";
+const description =
+    "Bent u op zoek naar een professional die uw projecten tot in de puntjes verzorgt? Zoek niet verder! Bij ons vindt u alle soorten klussen onder één dak. Onze ervaren schrijnwerker beschikt over jarenlange expertise en levert prachtige resultaten op, ongeacht de grootte van het project. Van meubelmakerij en op maat ontworpen meubels tot schilder-, gyproc-, behang-, vloer-, tegel- en buitenwerken, wij hebben de kennis en ervaring om uw wensen waar te maken. Ook voor op gemaakte keukens en badkamers bent u aan het juiste adres. Laat u verrassen door onze kwaliteit en professionaliteit.";
 ---
 
 <!DOCTYPE html>
@@ -37,13 +34,15 @@ const { title, seoTitle, seoDescription } = Astro.props;
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="generator" content={Astro.generator} />
         <SEO
-            title={seoTitle}
-            description={seoDescription}
+            title={title}
+            description={description}
             twitter={{
                 creator: "@jnsbne",
             }}
+            extend={{
+                link: [{ rel: "icon", href: "/favicon.ico" }],
+            }}
         />
-        <title>{title}</title>
     </head>
     <body>
         <Header />
