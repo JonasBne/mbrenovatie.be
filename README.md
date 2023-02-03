@@ -1,11 +1,32 @@
 # MB Renovatie
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a2b36c0e-d0a9-485e-9ea2-60eb8a8a966f/deploy-status)](https://app.netlify.com/sites/mbrenovatie/deploys)
+
 ## Description
 
-This website is work in progress and will be released soon. More info will be added in a later stage.
+This repository contains the source code for [MB Renovatie](https://app.netlify.com/sites/mbrenovatie);
 
-## To do
+## Getting Started
 
--   [ ] SEO (https://github.com/jonasmerlin/astro-seo)
--   [ ] Hosting & deploy (https://docs.astro.build/en/guides/deploy/)
--   [ ] form submit
+This project was bootstrapped with [Astro](https://astro.build/).
+
+### Available scripts
+
+```bash
+
+# install all dependencies
+npm install
+
+# run development server
+npm run start
+
+# generate production build
+npm run build
+
+# preview build
+npm run astro preview
+```
+
+## License
+
+© Jonas Boone. MIT License. No free usage of images without explicit consent of the author.
