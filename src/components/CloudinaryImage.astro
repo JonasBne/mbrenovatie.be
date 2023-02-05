@@ -12,7 +12,12 @@ interface Props {
 const { src, ...props } = Astro.props;
 
 const cldInstance = new Cloudinary({ cloud: { cloudName: "dg4d0fzsj" } });
-const cldImage = cldInstance.image(src).toURL();
+const cldImage = cldInstance
+    .image(src)
+    .format("auto")
+    // @ts-ignore
+    .delivery("q_auto")
+    .toURL();
 ---
 
 <img src={cldImage} loading="lazy" {...props} />
