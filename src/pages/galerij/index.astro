@@ -5,11 +5,13 @@ import { appUrls } from "../../consts/appUrls";
 import Breadcrumbs, {
     Breadcrumb,
 } from "../../components/links/Breadcrumbs.astro";
-import coverImageCarpentry from "../../images/kitchens/kitchen-img01.jpeg";
-import coverImagePlasterBoards from "../../images/plaster-boards/plaster-boards-img02.jpg";
-import coverImagePainting from "../../images/painting-and-wallpapers/painting-img10.jpeg";
-import coverImageOutside from "../../images/outside/outside-img02.jpg";
-import coverImageFlooring from "../../images/plaster-boards/attic-renovated-plasterboards-painted-img01.jpeg";
+const coverImageCarpentry = "mbrenovatie/kitchens/kitchen-img01.jpeg";
+const coverImagePlasterBoards =
+    "mbrenovatie/plaster-boards/plaster-boards-img02.jpg";
+const coverImagePainting =
+    "mbrenovatie/painting-and-wallpapers/painting-img10.jpeg";
+const coverImageOutside = "mbrenovatie/outside/outside-img02.jpg";
+const coverImageFlooring = "mbrenovatie/floors-and-tiles/flooring-img06.jpeg";
 
 const breadcrumbs: Breadcrumb[] = [
     { label: "Home", linkTo: appUrls.home.base },

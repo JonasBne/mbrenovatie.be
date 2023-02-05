@@ -2,7 +2,17 @@
 import { appUrls } from "../../consts/appUrls";
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
-import { Image } from "@astrojs/image/components";
+import CloudinaryImage from "../../components/CloudinaryImage.astro";
+
+const image01 = "mbrenovatie/painting-and-wallpapers/painting-img08.jpg";
+const image02 = "mbrenovatie/painting-and-wallpapers/painting-img09.jpeg";
+const image03 = "mbrenovatie/floors-and-tiles/flooring-img06.jpeg";
+const image04 = "mbrenovatie/painting-and-wallpapers/painting-img04.jpeg";
+const image05 = "mbrenovatie/painting-and-wallpapers/painting-img05.jpeg";
+const image06 = "mbrenovatie/painting-and-wallpapers/painting-img10.jpeg";
+const image07 = "mbrenovatie/painting-and-wallpapers/painting-img02.jpeg";
+const image08 = "mbrenovatie/painting-and-wallpapers/painting-img06.jpeg";
+const image09 = "mbrenovatie/painting-and-wallpapers/painting-img03.jpeg";
 
 const breadcrumbs = [
     { label: "Home", linkTo: appUrls.home.base },
@@ -16,59 +26,59 @@ const breadcrumbs = [
     <article
         class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3"
     >
-        <Image
+        <CloudinaryImage
             alt="Schilderwerken woonkamer"
-            src={import(
-                "../../images/painting-and-wallpapers/painting-img08.jpg"
-            )}
+            src={image01}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Schilderwerken slaapkamer"
-            src={import(
-                "../../images/painting-and-wallpapers/painting-img09.jpeg"
-            )}
+            src={image02}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Gerenoveerde zolderverdieping"
-            src={import(
-                "../../images/plaster-boards/attic-renovated-plasterboards-painted-img01.jpeg"
-            )}
+            src={image03}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Schilderwerken"
-            src={import(
-                "../../images/painting-and-wallpapers/painting-img04.jpeg"
-            )}
+            src={image04}
+            height="100%"
+            width="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Schilderwerken keuken"
-            src={import(
-                "../../images/painting-and-wallpapers/painting-img05.jpeg"
-            )}
+            src={image05}
+            height="100%"
+            width="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Muurbehang goud"
-            src={import(
-                "../../images/painting-and-wallpapers/painting-img10.jpeg"
-            )}
+            src={image06}
+            height="100%"
+            width="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Schilderwerken"
-            src={import(
-                "../../images/painting-and-wallpapers/painting-img02.jpeg"
-            )}
+            src={image07}
+            height="100%"
+            width="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Houten garagepoort zwart geschilderd"
-            src={import(
-                "../../images/painting-and-wallpapers/painting-img06.jpeg"
-            )}
+            src={image08}
+            height="100%"
+            width="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Wc behangen met bloemenmotief"
-            src={import(
-                "../../images/painting-and-wallpapers/painting-img03.jpeg"
-            )}
+            src={image09}
+            height="100%"
+            width="100%"
         />
     </article>
 </Layout>

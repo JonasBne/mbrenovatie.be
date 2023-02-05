@@ -1,9 +1,9 @@
 ---
-import { Image } from "@astrojs/image/components";
+import CloudinaryImage from "./CloudinaryImage.astro";
 
 export interface Props {
     heading: string;
-    imageSrc: ImageMetadata;
+    imageSrc: string;
     imageAlt: string;
 }
 
@@ -14,4 +14,10 @@ const imageStyles = "my-2 hover:shadow-xl";
 ---
 
 <p class={headingStyles}>{heading}</p>
-<Image class={imageStyles} src={imageSrc} alt={imageAlt} />
+<CloudinaryImage
+    class={imageStyles}
+    src={imageSrc}
+    alt={imageAlt}
+    width="100%"
+    height="100%"
+/>

@@ -3,6 +3,20 @@ import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
 import { appUrls } from "../../consts/appUrls";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
+import CloudinaryImage from "../../components/CloudinaryImage.astro";
+
+const image01 = "mbrenovatie/floors-and-tiles/flooring-img03.jpg";
+const image02 = "mbrenovatie/floors-and-tiles/tiles-img01.jpeg";
+const image03 = "mbrenovatie/floors-and-tiles/flooring-img04.jpg";
+const image04 = "mbrenovatie/floors-and-tiles/flooring-img01.jpg";
+const image05 = "mbrenovatie/floors-and-tiles/flooring-img02.jpg";
+const image06 = "mbrenovatie/floors-and-tiles/flooring-img05.jpeg";
+const image07 = "mbrenovatie/floors-and-tiles/flooring-img06.jpeg";
+const image08 = "mbrenovatie/floors-and-tiles/tiles-img03.jpeg";
+const image09 = "mbrenovatie/floors-and-tiles/tiles-img02.jpeg";
+const image10 = "mbrenovatie/floors-and-tiles/tiles-img04.jpeg";
+const image11 = "mbrenovatie/floors-and-tiles/flooring-img07.jpeg";
+const image12 = "mbrenovatie/floors-and-tiles/tiles-img05.jpeg";
 
 const breadcrumbs = [
     { label: "Home", linkTo: appUrls.home.base },
@@ -16,68 +30,90 @@ const breadcrumbs = [
     <article
         class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
     >
-        <Image
+        <CloudinaryImage
             alt="Lichte laminaatvloer"
-            src={import("../../images/floors-and-tiles/flooring-img03.jpg")}
+            src={image01}
             class="lg:max-h-[99%]"
+            height="100%"
+            width="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Betegelde toog met grijze verticale wandtegels"
-            src={import("../../images/floors-and-tiles/tiles-img01.jpeg")}
+            src={image02}
             class="max-h-[99%]"
+            height="100%"
+            width="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Badkamervloer met grijze tegels"
-            src={import("../../images/floors-and-tiles/flooring-img04.jpg")}
+            src={image03}
+            height="100%"
+            width="100%"
         />
         <div class="sm:flex sm:flex-col sm:justify-between">
-            <Image
+            <CloudinaryImage
                 alt="Lichte parketvloer"
-                src={import("../../images/floors-and-tiles/flooring-img01.jpg")}
+                src={image04}
                 class="mb-4 sm:mb-0"
+                height="100%"
+                width="100%"
             />
-            <Image
+            <CloudinaryImage
                 alt="Lichte laminaatvloer"
-                src={import("../../images/floors-and-tiles/flooring-img02.jpg")}
+                src={image05}
                 class="lg:hidden"
+                height="100%"
+                width="100%"
             />
         </div>
-        <Image
+        <CloudinaryImage
             alt="Donkeren laminaatvloer met knoesten"
-            src={import("../../images/floors-and-tiles/flooring-img05.jpeg")}
+            src={image06}
+            height="100%"
+            width="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Lichte laminaatvloer"
-            src={import("../../images/floors-and-tiles/flooring-img06.jpeg")}
+            src={image07}
+            height="100%"
+            width="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Badkamervloer met grijze tegels"
-            src={import("../../images/floors-and-tiles/tiles-img03.jpeg")}
+            src={image08}
             class="xl:w-[110vw]"
+            height="100%"
+            width="100%"
         />
 
         <div class="sm:flex md:flex-col sm:justify-between">
-            <Image
+            <CloudinaryImage
                 alt="Betegeld bad met wandtegels met marmeren look "
-                src={import("../../images/floors-and-tiles/tiles-img02.jpeg")}
+                src={image09}
                 class="mb-4 sm:mb-0"
+                height="100%"
+                width="100%"
             />
-            <Image
+            <CloudinaryImage
                 alt="Betegelde douche met wandtegels met marmeren look "
-                src={import("../../images/floors-and-tiles/tiles-img04.jpeg")}
+                src={image10}
                 class="mb-4 sm:mb-0"
+                height="100%"
+                width="100%"
             />
-            <Image
+            <CloudinaryImage
                 alt="Lichte laminaatvloer"
-                src={import(
-                    "../../images/floors-and-tiles/flooring-img07.jpeg"
-                )}
+                src={image11}
+                height="100%"
+                width="100%"
             />
         </div>
-        <Image
+        <CloudinaryImage
             alt="Betegelde douchewand met verticale groen-grijze wandtegels"
-            src={import("../../images/floors-and-tiles/tiles-img05.jpeg")}
+            src={image12}
             class="xl:max-h-[99%]"
+            height="100%"
+            width="100%"
         />
     </article>
 </Layout>

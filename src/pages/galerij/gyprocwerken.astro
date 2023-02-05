@@ -2,7 +2,16 @@
 import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
 import { appUrls } from "../../consts/appUrls";
 import Layout from "../../layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
+import CloudinaryImage from "../../components/CloudinaryImage.astro";
+
+const image01 = "mbrenovatie/plaster-boards/plaster-boards-img02.jpg";
+const image02 = "mbrenovatie/plaster-boards/plaster-boards-img03.jpg";
+const image03 = "mbrenovatie/plaster-boards/plaster-boards-img04.jpg";
+const image04 = "mbrenovatie/plaster-boards/plaster-boards-img06.jpg";
+const image05 = "mbrenovatie/plaster-boards/plaster-boards-img07.jpg";
+const image06 = "mbrenovatie/plaster-boards/plaster-boards-img09.jpeg";
+const image07 = "mbrenovatie/plaster-boards/plaster-boards-img11.jpeg";
+const image08 = "mbrenovatie/plaster-boards/plaster-boards-img08.jpeg";
 
 const breadcrumbs = [
     { label: "Home", linkTo: appUrls.home.base },
@@ -17,53 +26,59 @@ const breadcrumbs = [
         class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3"
     >
         <div>
-            <Image
+            <CloudinaryImage
                 alt="Gyprocwerken"
-                src={import(
-                    "../../images/plaster-boards/plaster-boards-img02.jpg"
-                )}
+                src={image01}
                 class="mb-3"
+                width="100%"
+                height="100%"
             />
-            <Image
+            <CloudinaryImage
                 alt="Gyprocwerken"
-                src={import(
-                    "../../images/plaster-boards/plaster-boards-img03.jpg"
-                )}
+                src={image02}
+                width="100%"
+                height="100%"
             />
         </div>
-        <Image
+        <CloudinaryImage
             alt="Gyprocwerken"
-            src={import("../../images/plaster-boards/plaster-boards-img04.jpg")}
+            src={image03}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Gyprocwerken"
-            src={import("../../images/plaster-boards/plaster-boards-img06.jpg")}
+            src={image04}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Gyprocwerken"
-            src={import("../../images/plaster-boards/plaster-boards-img07.jpg")}
+            src={image05}
+            width="100%"
+            height="100%"
         />
         <div>
-            <Image
+            <CloudinaryImage
                 alt="Gyprocwerken"
-                src={import(
-                    "../../images/plaster-boards/plaster-boards-img09.jpeg"
-                )}
+                src={image06}
                 class="mb-4"
+                width="100%"
+                height="100%"
             />
-            <Image
+            <CloudinaryImage
                 alt="Gyprocwerken"
-                src={import(
-                    "../../images/plaster-boards/plaster-boards-img11.jpeg"
-                )}
+                src={image07}
+                width="100%"
+                height="100%"
             />
         </div>
-        <Image
+        <CloudinaryImage
             alt="Gyprocwerken traphal"
-            src={import(
-                "../../images/plaster-boards/plaster-boards-img08.jpeg"
-            )}
+            src={image08}
             class="sm:h-[55vh] md:h-[62vh] lg:h-[66vh] xl:h-[51vh] 2xl:h-[92vh]"
+            width="100%"
+            height="100%"
         />
     </article>
 </Layout>
