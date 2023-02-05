@@ -4,7 +4,7 @@
 
 ## Description
 
-This repository contains the source code for [MB Renovatie](https://app.netlify.com/sites/mbrenovatie);
+This repository contains the source code for [MB Renovatie](https://app.netlify.com/sites/mbrenovatie).
 
 ## Getting Started
 
@@ -29,4 +29,4 @@ npm run astro preview
 
 ## License
 
-© Jonas Boone. MIT License. No free usage of images without explicit consent of the author.
+© Jonas Boone. MIT License.
