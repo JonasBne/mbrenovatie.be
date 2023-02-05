@@ -2,7 +2,19 @@
 import Breadcrumbs from "../../components/links/Breadcrumbs.astro";
 import { appUrls } from "../../consts/appUrls";
 import Layout from "../../layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
+import CloudinaryImage from "../../components/CloudinaryImage.astro";
+
+const image01 = "mbrenovatie/carpentry/floating-tv-closet-mortsel-img01.png";
+const image02 = "mbrenovatie/carpentry/built-in-closet-kontich-img01.jpeg";
+const image03 = "mbrenovatie/carpentry/built-in-closet-kontich-img03.jpg";
+const image04 = "mbrenovatie/carpentry/built-in-closet-kontich-img06.jpg";
+const image05 = "mbrenovatie/carpentry/tv-closet-img08.jpg";
+const image06 = "mbrenovatie/kitchens/kitchen-img01.jpg";
+const image07 =
+    "mbrenovatie/bathrooms/bathroom-with-floating-closet-marble-kontich.jpg";
+const image08 = "mbrenovatie/bathrooms/bathroom-with-floating-closet.jpg";
+const image09 =
+    "mbrenovatie/bathrooms/bathroom-with-floating-closet-kontich.jpg";
 
 const breadcrumbs = [
     { label: "Home", linkTo: appUrls.home.base },
@@ -16,55 +28,59 @@ const breadcrumbs = [
     <article
         class="px-6 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
     >
-        <Image
+        <CloudinaryImage
             alt="Zwevend tv-meubel"
-            src={import(
-                "../../images/carpentry/floating-tv-closet-mortsel-img01.png"
-            )}
+            src={image01}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Ingebouwde kast met beelden"
-            src={import(
-                "../../images/carpentry/built-in-closet-kontich-img01.jpeg"
-            )}
+            src={image02}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Laag tv-meubel"
-            src={import(
-                "../../images/carpentry/built-in-closet-kontich-img03.jpeg"
-            )}
+            src={image03}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Ingemaakte kast"
-            src={import(
-                "../../images/carpentry/built-in-closet-kontich-img06.jpeg"
-            )}
+            src={image04}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Tv-meubel"
-            src={import("../../images/carpentry/tv-closet-img08.jpeg")}
+            src={image05}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Keuken met ingemaakte kasten"
-            src={import("../../images/kitchens/kitchen-img01.jpeg")}
+            src={image06}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Badkamermeubel met twee opbouwlavabo's en spiegelkast"
-            src={import(
-                "../../images/bathrooms/bathroom-with-floating-closet-marble-kontich.jpeg"
-            )}
+            src={image07}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Zwevend badkamermeubel"
-            src={import(
-                "../../images/bathrooms/bathroom-with-floating-closet.jpg"
-            )}
+            src={image08}
+            width="100%"
+            height="100%"
         />
-        <Image
+        <CloudinaryImage
             alt="Zwevend meubel met spiegel"
-            src={import(
-                "../../images/bathrooms/bathroom-with-floating-closet-kontich.jpeg"
-            )}
+            src={image09}
+            width="100%"
+            height="100%"
         />
     </article>
 </Layout>

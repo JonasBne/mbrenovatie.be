@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
 import Breadcrumbs from "../components/links/Breadcrumbs.astro";
 import { appUrls } from "../consts/appUrls";
 import ContactForm from "../components/ContactForm.astro";
+import CloudinaryImage from "../components/CloudinaryImage.astro";
+
+const image = "mbrenovatie/carpentry/built-in-closet-kontich-img01.jpeg";
 
 const breadcrumbs = [
     { label: "Home", linkTo: appUrls.home.base },
@@ -17,12 +19,12 @@ const breadcrumbs = [
     </nav>
     <div class="my-2 lg:grid lg:grid-cols-2 lg:mb-6">
         <aside class="lg:px-6 lg:my-6">
-            <Image
+            <CloudinaryImage
                 alt="foto van zwevend tv-meubel"
-                src={import(
-                    "../images/carpentry/built-in-closet-kontich-img01.jpeg"
-                )}
+                src={image}
                 class="lg:rounded-md"
+                height="100%"
+                width="100%"
             />
         </aside>
         <article class="px-6 mt-6">

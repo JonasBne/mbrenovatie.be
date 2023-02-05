@@ -1,0 +1,23 @@
+---
+import { Cloudinary } from "@cloudinary/url-gen";
+
+interface Props {
+    alt: string;
+    class?: string;
+    height: string;
+    src: string;
+    width: string;
+}
+
+const { src, ...props } = Astro.props;
+
+const cldInstance = new Cloudinary({ cloud: { cloudName: "dg4d0fzsj" } });
+const cldImage = cldInstance
+    .image(src)
+    .format("auto")
+    // @ts-ignore
+    .delivery("q_auto")
+    .toURL();
+---
+
+<img src={cldImage} loading="lazy" {...props} />

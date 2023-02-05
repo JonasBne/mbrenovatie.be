@@ -1,14 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
 import PrimaryLink from "../components/links/PrimaryLink.astro";
 import SecondaryLink from "../components/links/SecondaryLink.astro";
 import { appUrls } from "../consts/appUrls";
-import coverImage from "../images/kitchens/kitchen-img01.jpeg";
-import previewImage1 from "../images/carpentry/built-in-closet-kontich-img03.jpeg";
-import previewImage2 from "../images/carpentry/floating-tv-closet-mortsel-img01.png";
-import previewImage3 from "../images/carpentry/built-in-closet-kontich-img01.jpeg";
-import previewImage4 from "../images/outside/outside-img02.jpg";
+import CloudinaryImage from "../components/CloudinaryImage.astro";
+
+const coverImage = "mbrenovatie/kitchens/kitchen-img01.jpg";
+const previewImage1 =
+    "mbrenovatie/carpentry/built-in-closet-kontich-img03.jpeg";
+const previewImage2 =
+    "mbrenovatie/carpentry/floating-tv-closet-mortsel-img01.png";
+const previewImage3 =
+    "mbrenovatie/carpentry/built-in-closet-kontich-img01.jpeg";
+const previewImage4 = "mbrenovatie/outside/outside-img02.jpg";
 
 const keyWordStyles =
     "font-semibold mb-2 text-gray-900 text-3xl lg:font-bold lg:mb-4 lg:mx-4 lg:text-3xl";
@@ -16,10 +20,12 @@ const keyWordStyles =
 
 <Layout>
     <div class="flex flex-col lg:flex-row lg:mt-12">
-        <Image
+        <CloudinaryImage
             alt="foto van zwevend tv-meubel"
             src={coverImage}
             class="lg:pl-6 lg:w-[90vh] lg:h-auto"
+            height="100%"
+            width="100%"
         />
         <article class="px-6 mt-6 lg:mt-0 lg:ml-2">
             <div>
@@ -57,16 +63,30 @@ const keyWordStyles =
             Recente werken
         </h3>
         <div class="flex flex-col lg:grid lg:grid-cols-4 gap-4 justify-between">
-            <Image
+            <CloudinaryImage
                 alt="Ingemaakte kast woonkamer met zwevend schab"
                 src={previewImage1}
+                height="100%"
+                width="100%"
             />
-            <Image
+            <CloudinaryImage
                 alt="Zwevend tv-meubel in houtsoort MDF (gelakt)"
                 src={previewImage2}
+                height="100%"
+                width="100%"
             />
-            <Image alt="Ingemaakte kast slaapkamer" src={previewImage3} />
-            <Image alt="Houten wand en tuinhuis" src={previewImage4} />
+            <CloudinaryImage
+                alt="Ingemaakte kast slaapkamer"
+                src={previewImage3}
+                height="100%"
+                width="100%"
+            />
+            <CloudinaryImage
+                alt="Houten wand en tuinhuis"
+                src={previewImage4}
+                height="100%"
+                width="100%"
+            />
         </div>
         <div class="flex items-center justify-center my-8 lg:my-12">
             <SecondaryLink
